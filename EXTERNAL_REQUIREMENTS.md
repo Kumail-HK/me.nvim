@@ -16,7 +16,7 @@ These tools must be installed on your system separately — they cannot be manag
 
 | Tool                                                | Purpose                                  | Install                                    |
 | --------------------------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| [Claude Code](https://www.anthropic.com)            | AI coding agent (`<leader>ac`)           | `npm install -g @anthropic-ai/claude-code` |
+| [OpenCode](https://opencode.ai) | AI coding agent (`<leader>ac`) | `npm install -g opencode-ai` |
 | [Lazygit](https://github.com/jesseduffield/lazygit) | Git TUI (`<leader>gl`)                   | See install steps below                    |
 | [luarocks](https://luarocks.org)                    | Required for Mason to install `luacheck` | `sudo apt install luarocks`                |
 

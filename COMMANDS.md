@@ -47,11 +47,11 @@
 | `<leader>th` | Toggle horizontal split terminal |
 | `<leader>tv` | Toggle vertical split terminal   |
 
-## AI (Claude Code)
+## AI (OpenCode)
 
-| Key          | Action                              |
-| ------------ | ----------------------------------- |
-| `<leader>ac` | Toggle Claude Code (vertical split) |
+| Key          | Action                           |
+| ------------ | -------------------------------- |
+| `<leader>ac` | Toggle OpenCode (vertical split) |
 
 ## LSP
 
