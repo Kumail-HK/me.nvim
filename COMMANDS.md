@@ -9,6 +9,7 @@
 | `<leader>ff` | Find files                                |
 | `<leader>fg` | Live grep (search strings across project) |
 | `<leader>fw` | Grep word under cursor                    |
+| `<leader>fy` | Yank history                              |
 | `<leader>fr` | Recent files                              |
 | `<leader>fb` | Open buffers (currently open files)       |
 
