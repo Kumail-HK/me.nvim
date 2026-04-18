@@ -36,7 +36,7 @@
 | Key          | Action         |
 | ------------ | -------------- |
 | `<leader>hg` | Open Neogit UI |
-| `<leader>hd` | Open Diffview  |
+| `<leader>hD` | Open Diffview  |
 | `<leader>hl` | Open Lazygit   |
 
 ## Terminal (Toggleterm)

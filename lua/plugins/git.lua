@@ -33,7 +33,7 @@ return {
       }
 
       vim.keymap.set('n', '<leader>hg', '<cmd>Neogit<cr>', { desc = 'Open Neogit' })
-      vim.keymap.set('n', '<leader>hd', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
+      vim.keymap.set('n', '<leader>hD', '<cmd>DiffviewOpen<cr>', { desc = 'Open Diffview' })
     end,
   },
 }

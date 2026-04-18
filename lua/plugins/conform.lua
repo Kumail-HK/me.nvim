@@ -2,6 +2,7 @@ return {
   {
     'stevearc/conform.nvim',
     config = function()
+      local mason_bin = vim.fn.stdpath 'data' .. '/mason/bin/'
       require('conform').setup {
         formatters_by_ft = {
           javascript = { 'prettier' },
@@ -16,13 +17,13 @@ return {
         -- Tell conform to look in Mason's bin folder
         formatters = {
           prettier = {
-            command = vim.fn.stdpath 'data' .. '/mason/bin/prettier',
+            command = mason_bin,
           },
           stylua = {
-            command = vim.fn.stdpath 'data' .. '/mason/bin/stylua',
+            command = mason_bin,
           },
           black = {
-            command = vim.fn.stdpath 'data' .. '/mason/bin/black',
+            command = mason_bin,
           },
         },
       }

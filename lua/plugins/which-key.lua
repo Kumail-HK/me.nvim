@@ -18,6 +18,7 @@ return {
         { '<leader>e', desc = 'Toggle file tree' },
         { '<leader>q', desc = 'File diagnostics' },
         { '<leader>m', group = 'markdown' },
+        { '<leader>ac', group = 'ai' },
       }
     end,
   },

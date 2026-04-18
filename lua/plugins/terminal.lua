@@ -29,11 +29,9 @@ return {
       local opencode = Terminal:new {
         cmd = 'opencode',
         direction = 'vertical',
-        size = vim.o.columns * 0.45,
+        size = function() return vim.o.columns * 0.45 end,
         hidden = true,
-        on_open = function(term)
-          vim.cmd 'startinsert!'
-        end,
+        on_open = function(term) vim.cmd 'startinsert!' end,
       }
 
       vim.keymap.set('n', '<leader>ac', function() opencode:toggle() end, { desc = 'OpenCode' })
