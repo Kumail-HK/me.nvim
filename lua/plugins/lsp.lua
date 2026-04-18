@@ -65,11 +65,14 @@ return {
         ['<S-Tab>'] = { 'select_prev', 'fallback' },
       },
       completion = {
-        documentation = { auto_show = false },
+        documentation = { auto_show = true, auto_show_delay_ms = 200 },
         list = { selection = { preselect = false, auto_insert = false } },
       },
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp' },
+        providers = {
+          lsp = { fallbacks = {} },
+        },
       },
       fuzzy = {
         implementation = 'prefer_rust_with_warning',
