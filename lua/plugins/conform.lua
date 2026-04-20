@@ -17,13 +17,13 @@ return {
         -- Tell conform to look in Mason's bin folder
         formatters = {
           prettier = {
-            command = mason_bin,
+            command = mason_bin .. 'prettier',
           },
           stylua = {
-            command = mason_bin,
+            command = mason_bin .. 'stylua',
           },
           black = {
-            command = mason_bin,
+            command = mason_bin .. 'black',
           },
         },
       }
