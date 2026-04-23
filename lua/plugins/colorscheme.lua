@@ -14,6 +14,7 @@ return {
           mason = true,
           blink_cmp = true,
           render_markdown = true,
+          lualine = {},
         },
       }
 
