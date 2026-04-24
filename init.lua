@@ -22,6 +22,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
 vim.opt.splitright = true
+vim.opt.clipboard = 'unnamedplus'
 vim.g.mapleader = ' '
 
 -- Load plugins

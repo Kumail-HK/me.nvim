@@ -4,21 +4,21 @@ These tools must be installed on your system separately — they cannot be manag
 
 ## Required
 
-| Tool                                             | Purpose                                                    | Install                                                               |
-| ------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------- |
-| [Node.js 18+](https://nodejs.org)                | Required for Claude Code and `ts_ls` LSP                   | `sudo apt install nodejs` or via [nvm](https://github.com/nvm-sh/nvm) |
-| [Git](https://git-scm.com)                       | Required for lazy.nvim bootstrap and all git plugins       | `sudo apt install git`                                                |
-| [ripgrep](https://github.com/BurntSushi/ripgrep) | Required for Telescope live grep search                    | `sudo apt install ripgrep`                                            |
-| [fzf](https://github.com/junegunn/fzf)           | Required for Telescope fzf native extension                | `sudo apt install fzf`                                                |
-| [A Nerd Font](https://www.nerdfonts.com)         | Required for icons in Neo-tree, which-key, render-markdown | Download from nerdfonts.com and set in terminal                       |
+| Tool                                             | Purpose                                                    | Install                                                                |
+| ------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------------------  |
+| [Node.js 18+](https://nodejs.org)                | Required for `ts_ls` LSP                                   | `sudo apt install nodejs` or via [nvm](https://github.com/nvm-sh/nvm)  |
+| [Git](https://git-scm.com)                       | Required for lazy.nvim bootstrap and all git plugins       | `sudo apt install git`                                                 |
+| [ripgrep](https://github.com/BurntSushi/ripgrep) | Required for Telescope live grep search                    | `sudo apt install ripgrep`                                             |
+| [fzf](https://github.com/junegunn/fzf)           | Required for Telescope fzf native extension                | `sudo apt install fzf`                                                 |
+| [A Nerd Font](https://www.nerdfonts.com)         | Required for icons in Neo-tree, which-key, render-markdown | Download from nerdfonts.com and set in terminal                        |
 
 ## Recommended
 
-| Tool                                                | Purpose                                  | Install                                    |
-| --------------------------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| [OpenCode](https://opencode.ai) | AI coding agent (`<leader>ac`) | `npm install -g opencode-ai` |
-| [Lazygit](https://github.com/jesseduffield/lazygit) | Git TUI (`<leader>gl`)                   | See install steps below                    |
-| [luarocks](https://luarocks.org)                    | Required for Mason to install `luacheck` | `sudo apt install luarocks`                |
+| Tool                                                | Purpose                                  | Install                      |
+| --------------------------------------------------- | ---------------------------------------- | ---------------------------- |
+| [OpenCode](https://opencode.ai)                     | AI coding agent (`<leader>ac`)           | `npm install -g opencode-ai` |
+| [Lazygit](https://github.com/jesseduffield/lazygit) | Git TUI (`<leader>gl`)                   | See install steps below      |
+| [luarocks](https://luarocks.org)                    | Required for Mason to install `luacheck` | `sudo apt install luarocks`  |
 
 ## Mason-managed (installed via `:MasonInstall`)
 
@@ -58,4 +58,30 @@ brew install lazygit
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 nvm install 20
 nvm use 20
+```
+
+## Ubuntu / Wayland Clipboard
+
+Neovim clipboard integration on Wayland depends on `wl-clipboard`. This provides
+`wl-copy` and `wl-paste`, which Neovim uses for system clipboard access. Without it,
+`:checkhealth provider` may report `clipboard provider not available`.
+
+Install on Ubuntu:
+
+```bash
+sudo apt install wl-clipboard
+```
+
+Verify:
+
+```bash
+wl-copy --version
+nvim --headless "+checkhealth provider" +qa
+```
+
+Inside Neovim:
+
+```vim
+:checkhealth provider
+:echo has('clipboard')
 ```
