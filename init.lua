@@ -23,6 +23,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = 'yes'
 vim.opt.splitright = true
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.spelllang = { 'en_gb' }
 vim.g.mapleader = ' '
 
 -- Load plugins

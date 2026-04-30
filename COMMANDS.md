@@ -70,6 +70,12 @@
 | ------------ | ------------------------------------------- |
 | `<leader>lf` | Format current file (conform, LSP fallback) |
 
+## Spell
+
+| Key          | Action               |
+| ------------ | -------------------- |
+| `<leader>st` | Toggle spell checker |
+
 ## Diagnostics (Trouble)
 
 | Key         | Action                                    |

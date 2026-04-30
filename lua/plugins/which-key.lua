@@ -13,6 +13,7 @@ return {
       wk.add {
         { '<leader>f', group = 'find' },
         { '<leader>h', group = 'git' },
+        { '<leader>s', group = 'spell' },
         { '<leader>t', group = 'terminal' },
         { '<leader>l', group = 'lsp' },
         { '<leader>e', desc = 'Toggle file tree' },
